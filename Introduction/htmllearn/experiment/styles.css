@@ -1,0 +1,31 @@
+.atas {
+    background-color: lightblue;
+    font-size: large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid red;
+    padding: 20px;
+    text-align: center;
+}
+
+#nama {
+    text-align: center;
+    padding: 20px;
+    font-size: 50px;
+    border: 2px red;
+}
+
+.penjelasan {
+    border: 2px solid darkblue;
+    text-align: left;
+    margin-left: 0 auto;
+    display: inline-block;
+    padding: 20px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    height: 300px;
+    width: auto;
+    margin-bottom: 10px;
+}
