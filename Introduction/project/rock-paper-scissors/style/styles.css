@@ -1,0 +1,156 @@
+*{
+    border: 1px solid red;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFBDE;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    margin: 20px 30px;
+    color: #FFFBDE;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #4682A9;
+    border-radius: 20px;
+}
+.left-section,
+.right-section{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.left-section{
+    justify-content: flex-start;
+}
+.right-section{
+    justify-content: flex-end;
+}
+
+
+#name {
+    font-size: 30px;
+    width:220px;
+}
+
+#title{
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 50px;
+}
+
+#scoreboard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 20px;
+    width: 200px;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    margin: 135px 150px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 150px;
+    background-color: #91C8E4;
+    border-radius: 20px;
+}
+
+#word {
+    font-size: 40px;
+}
+
+#button {
+    width: 150px;
+    height: 50px;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    background-color: #4682A9;
+    color: #FFFBDE;
+    border-radius: 20px;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+button:hover {
+    background-color: #6dc2fa;
+    color: #222;
+    transform: translateY(-2px) scale(1.04);
+}
+button:active {
+    transform: scale(0.96);
+    filter: brightness(0.95);
+}
+
+.socmed{
+    display: flex;
+    justify-content: flex-start;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;   
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #222;
+    color: #FFFBDE;
+    align-items: center;
+}
+
+#univ,
+#socmed{
+    display: flex;
+    flex-grow: 1;
+}
+
+#univ{
+    justify-content: start;
+    width: 0px;
+}
+
+#socmed{
+    justify-content: end;
+    width: 0px;
+}
+
+#footername{
+    width: 500px;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+#footername:hover {
+    color: #6dc2fa;
+    transform: scale(1.02);
+}
+
+a:hover{
+    color: #6dc2fa;
+    transform: scale(1.02);
+}
