@@ -1,5 +1,5 @@
 * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* color: white; */
 }
 
@@ -86,10 +86,26 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 2vw;
+    /* padding-top: 2vw; */
+    height: 100%;
 }
 
 .form-title{
-    
+    font-size: xx-large;
+    font-family:'Courier New', Courier, monospace;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    font-size: 1vw;
 }
 
 
