@@ -1,4 +1,3 @@
-// Wait for the DOM to be fully loaded before running the script
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- QUARTERLY REVENUE LINE CHART ---
@@ -9,36 +8,57 @@ document.addEventListener('DOMContentLoaded', () => {
             labels: ['1st', '2nd', '3rd', '4th'],
             datasets: [{
                 label: 'Quarterly Revenue',
-                data: [20, 40, 75, 60], // Sample data from the image
-                borderColor: '#6a0dad', // Purple line color
-                backgroundColor: 'rgba(106, 13, 173, 0.1)', // Light purple fill under the line
-                tension: 0.4, // Makes the line smooth
+                data: [20, 40, 75, 60],
+                borderColor: '#8A2BE2', // A brighter purple to match image
+                backgroundColor: 'rgba(138, 43, 226, 0.1)',
+                tension: 0.4,
                 fill: true,
             }]
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
+                // This configures the legend to match the image
                 legend: {
-                    display: false // Hides the legend at the top
+                    display: true,
+                    position: 'top',
+                    align: 'start', // Aligns legend to the left
+                    labels: {
+                        color: '#a0a0a0',
+                        boxWidth: 15,
+                        padding: 20,
+                        font: {
+                            size: 14
+                        }
+                    }
                 }
             },
             scales: {
                 y: {
                     beginAtZero: true,
+                    // This adds the "Revenue ($ mil)" label
+                    title: {
+                        display: true,
+                        text: 'Revenue ($ mil)',
+                        color: '#a0a0a0',
+                        font: {
+                            size: 14
+                        }
+                    },
                     ticks: {
-                        color: '#a0a0a0' // Y-axis labels color
+                        color: '#a0a0a0'
                     },
                     grid: {
-                        color: 'rgba(255, 255, 255, 0.1)' // Color of the grid lines
+                        color: 'rgba(255, 255, 255, 0.1)'
                     }
                 },
                 x: {
                     ticks: {
-                        color: '#a0a0a0' // X-axis labels color
+                        color: '#a0a0a0'
                     },
                     grid: {
-                        display: false // Hides the vertical grid lines
+                        display: false
                     }
                 }
             }
@@ -53,24 +73,32 @@ document.addEventListener('DOMContentLoaded', () => {
             labels: ['Social', 'Direct', 'Referral', 'Other'],
             datasets: [{
                 label: 'Source Breakdown',
-                data: [35, 25, 20, 20], // Sample data from the image
+                data: [35, 25, 20, 20],
                 backgroundColor: [
-                    '#FFFF00', // Yellow for Social
-                    '#0000FF', // Blue for Direct
-                    '#FF0000', // Red for Referral
-                    '#00FF7F', // Green for Other
+                    '#FFFF00', // Yellow
+                    '#4169E1', // Royal Blue (closer to image)
+                    '#DC143C', // Crimson Red (closer to image)
+                    '#32CD32', // Lime Green (closer to image)
                 ],
-                borderColor: '#3a3a3a', // Same as card background for spacing
-                borderWidth: 2
+                borderColor: '#3a3a3a', // Match the new card background
+                borderWidth: 3
             }]
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 legend: {
+                    display: true,
                     position: 'top',
+                    align: 'center', // Center the legend items
                     labels: {
-                        color: '#a0a0a0' // Legend text color
+                        color: '#a0a0a0',
+                        boxWidth: 15,
+                        padding: 20,
+                        font: {
+                            size: 14
+                        }
                     }
                 }
             }
