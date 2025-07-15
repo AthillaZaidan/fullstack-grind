@@ -8,11 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Boldonse&family=Imperial+Script&family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Admin-Dashboard</title>
 </head>
 <body>
     <div class="main">
         <aside class="sidebar">
+            <h1 class="sidebar-title">Dashboard</h1>
             <div class="sidebar-menu">
                 <a href="#" class="dash-menu">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
@@ -37,7 +39,7 @@
             </div>
             <div class="sidebar-settings">
                 <a href="#" class="dash-menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.14,12.94a2,2,0,0,1,0-1.88l1.52-1.52a1,1,0,0,0-.34-1.6l-2.14-.86a1,1,0,0,0-1.18.34l-1,1.73a1,1,0,0,0-1.18,0l-1-1.73a1,1,0,0,0-1.18-.34l-2.14.86a1,1,0,0,0-.34,1.6l1.52,1.52a2,2,0,0,1,0,1.88l-1.52,1.52a1,1,0,0,0,.34,1.6l2.14.86a1,1,0,0,0,1.18-.34l1-1.73a1,1,0,0,0,1.18,0l1,1.73a1,1,0,0,0,1.18.34l2.14-.86a1,1,0,0,0,.34-1.6Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
                     Settings
                 </a>
                 <a href="#" class="dash-menu">
@@ -52,28 +54,74 @@
         </aside>
         <main class="mainArea">
             <header>
-                <div class="title">
-                    Admin-Dashboard
+                <div class="welcome">
+                    Welcome, Athilla
                 </div>
-                <div class="headercontainer">
-                    <div class="welcome">
-                        Welcome, Athilla
-                    </div>
-                    <div class="action-header">
-                        <button class="header-btn">
-                            New
-                        </button>
-                        <button class="header-btn">
-                            Share
-                        </button>
-                        <button class="header-btn">
-                            Upload
-                        </button>
-                    </div>
+                <div class="action-header">
+                    <button class="header-btn">
+                        New
+                    </button>
+                    <button class="header-btn">
+                        Share
+                    </button>
+                    <button class="header-btn">
+                        Upload
+                    </button>
                 </div>
             </header>
             <section class="stats">
-                
+                <div class="stats-card">
+                    <div class="card">
+                        <div class="top-card">
+                            <div class="card-title">Total Users</div>
+                            <div class="card-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                        </div>
+                        <div class="card-num">8,249</div>
+                        <div class="card-stats">12% from last month</div>
+                    </div>
+                    <div class="card">
+                        <div class="top-card">
+                            <div class="card-title">Revenue</div>
+                            <div class="card-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                            </div>
+                        </div>
+                        <div class="card-num">$124,569</div>
+                        <div class="card-stats">8% from last month</div>
+                    </div>
+                    <div class="card">
+                        <div class="top-card">
+                            <div class="card-title">Active Projects</div>
+                            <div class="card-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            </div>
+                        </div>
+                        <div class="card-num">42</div>
+                        <div class="card-stats">3% from last month</div>
+                    </div>
+                    <div class="card">
+                        <div class="top-card">
+                            <div class="card-title">Conversion Rate</div>
+                            <div class="card-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                            </div>
+                        </div>
+                        <div class="card-num">3.24%</div>
+                        <div class="card-stats">4% from last month</div>
+                    </div>
+                </div>
+            </section>
+            <section class="graph-card">
+                <div class="card">
+                    <div class="card-title">Quarterly Revenue</div>
+                    <canvas id="quarterlyRevenueChart"></canvas>
+                </div>
+                <div class="card">
+                    <div class="card-title">Source Breakdown</div>
+                    <canvas id="sourceBreakdownChart"></canvas>
+                </div>
             </section>
         </main>
     </div>
