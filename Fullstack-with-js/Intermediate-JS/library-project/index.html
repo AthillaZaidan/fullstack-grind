@@ -2,18 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Boldonse&family=Imperial+Script&family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="./src/style.css" rel="stylesheet">
     <script src="./src/main.js" defer></script>
-    <title>Library-App</title>
+    <title>library-app</title>
   </head>
-  <body class="bg-black">
-    <aside class="bg-gray-700 rounded-4xl">
-      <div class="rounded-e-full"><img src=""></div>
-    </aside>
+  <body>
+    <main class="pt-4 pb-4 p-6">
+      <header class="border border-black rounded-2xl p-7 flex justify-between items-center">
+        <div class="font-bold text-2xl">Library</div>
+        <button id="add-book-button" class="flex bg-blue-500 hover:bg-blue-600 active:scale-90 rounded-lg p-2.5 items-center justify-center font-bold">Add Book</button>
+      </header>
+      <div id="book-list" class="border border-black rounded-2xl p-7 flex mt-4 flex-col">
+        <div class="flex items-center justify-center font-bold text-3xl mb-4">Book List</div>
+        <div id="book-grid" class="grid grid-cols-3 gap-4">
+        </div>
+      </div>
+    </main>
+
+    <div id="add-book-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+      <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-4">Add New Book</h2>
+        <form id="add-book-form">
+          <div class="mb-4">
+            <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
+            <input type="text" id="title" name="title" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" required>
+          </div>
+          <div class="mb-4">
+            <label for="author" class="block text-sm font-medium text-gray-700">Author</label>
+            <input type="text" id="author" name="author" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" required>
+          </div>
+          <div class="mb-4">
+            <label for="pages" class="block text-sm font-medium text-gray-700">Pages</label>
+            <input type="number" id="pages" name="pages" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" required>
+          </div>
+          <div class="mb-4 flex items-center">
+            <input type="checkbox" id="read-status" name="read-status" class="h-4 w-4 text-indigo-600 border-gray-300 rounded">
+            <label for="read-status" class="ml-2 block text-sm text-gray-900">Have you read it?</label>
+          </div>
+          <div class="flex justify-end gap-4">
+            <button type="button" id="cancel-button" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">Cancel</button>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Book</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
