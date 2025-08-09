@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+  --color-orenkmj : #f29a4f;
+  --color-birukmj : #12143d;
+  --color-putihkmj : #f7f3e4;
+}
